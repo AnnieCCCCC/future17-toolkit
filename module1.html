@@ -1,0 +1,355 @@
+Exit code: 0
+Wall time: 0.8 seconds
+Output:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Core Understanding 鈥?Inclusive Classroom Hub</title>
+    <style>
+        /* Inherit global styles from homepage */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header - Same as homepage */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #4a6572);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-icon { font-size: 1.8rem; }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .nav-links a:hover { opacity: 0.8; }
+
+        /* Module-specific styles - Consistent design */
+        .module-hero {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6); /* Module 1 color */
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .module-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .video-placeholder {
+            background: #ecf0f1;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 2rem 0;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .key-takeaways {
+            background: #f4ecf7;
+            border-left: 4px solid #8e44ad;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        details {
+            margin: 1.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        summary {
+            padding: 1.2rem;
+            background: #f8f9fa;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        summary:hover { background: #e9ecef; }
+        .details-content {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        .download-button {
+            display: inline-block;
+            background: #8e44ad;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover { background: #732d91; }
+        .tip-box {
+            background: #e8f6f3;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            border-left: 4px solid #1abc9c;
+        }
+        .strength-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .strength-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 3px solid #8e44ad;
+        }
+        .udl-badge {
+            display: inline-block;
+            background: #9b59b6;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        /* Progress Navigation */
+        .progress-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        .nav-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover { background: #2980b9; }
+        .nav-button.secondary {
+            background: #95a5a6;
+        }
+        .nav-button.secondary:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">馃彨</span>
+                Inclusive Classroom Hub
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#modules">Modules</a>
+                <a href="index.html#resources">Resource Library</a>
+                <a href="index.html#home">Community</a>
+                <a href="index.html#home">For Leaders</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Module Hero Section -->
+    <section class="module-hero">
+        <h1>Module 1: Core Understanding 鈥?Autism & Dyslexia</h1>
+        <p>Build a foundation of knowledge to create a more effective and inclusive classroom.</p>
+    </section>
+
+    <!-- Main Module Content -->
+    <div class="module-container">
+        <!-- Video Introduction -->
+        <div class="video-placeholder">
+            [Embedded Video Player: "Seeing the Brilliance in Every Mind" - 2 min]
+        </div>
+
+        <!-- Key Takeaways -->
+        <div class="key-takeaways">
+            <h3>Key Takeaways:</h3>
+            <ul>
+                <li>Dyslexia is a common <em>learning difference</em> in reading/spelling, <strong>not</strong> a sign of low intelligence.</li>
+                <li>Autism is a neurodevelopmental condition that affects communication, social interaction, and sensory processing.</li>
+                <li>Students with both profiles have <strong>unique strengths</strong> that can be leveraged in the classroom.</li>
+                <li>Your role is to adapt your teaching to their needs, not to "fix" the student.</li>
+            </ul>
+        </div>
+
+        <!-- UDL Connection -->
+        <div class="tip-box">
+            <strong>馃挕 UDL Connection:</strong> Understanding learner variability is the first principle of Universal Design for Learning. This module helps you recognize and value the diverse ways your students think and learn.
+        </div>
+
+        <!-- Section 1.1 -->
+        <details open>
+            <summary>馃摎 Understanding Dyslexia: A Learning Difference <span class="udl-badge">UDL</span></summary>
+            <div class="details-content">
+                <p><strong>Simple Definition:</strong> A common learning difference that primarily affects reading and spelling. It is unrelated to intelligence. It's about how the brain processes language.</p>
+                
+                <h4>What You Might Observe in Class:</h4>
+                <ul>
+                    <li><strong>Reading:</strong> Slow, effortful reading; guessing words based on context; difficulty sounding out unfamiliar words</li>
+                    <li><strong>Spelling & Writing:</strong> Inconsistent spelling (e.g., "wuz" for "was"); messy handwriting; difficulty organizing thoughts in writing</li>
+                    <li><strong>Memory & Sequencing:</strong> Trouble remembering sequences like days of the week or multi-step instructions</li>
+                </ul>
+
+                <h4>Strength-Based Perspective:</h4>
+                <p>Students with dyslexia often develop remarkable strengths to compensate:</p>
+                <div class="strength-grid">
+                    <div class="strength-card">
+                        <strong>Problem-Solving</strong>
+                        <div>Creative thinking and innovation</div>
+                    </div>
+                    <div class="strength-card">
+                        <strong>Big Picture Thinking</strong>
+                        <div>Seeing connections others miss</div>
+                    </div>
+                    <div class="strength-card">
+                        <strong>Visual-Spatial Skills</strong>
+                        <div>Strong in arts, engineering, design</div>
+                    </div>
+                    <div class="strength-card">
+                        <strong>Empathy & Narrative</strong>
+                        <div>Understanding stories and emotions</div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>In a Kazakhstani Classroom:</strong> Challenges with reading and sound-processing may appear in both Kazakh and Russian languages. The core strategies you'll learn work across languages.
+                </div>
+
+                <a href="index.html#resources" class="download-button">馃摜 Download: "Spot the Strengths" Classroom Poster</a>
+                <a href="index.html#resources" class="download-button">馃摜 Download: Classroom Observation Checklist</a>
+            </div>
+        </details>
+
+        <!-- Section 1.2 -->
+        <details>
+            <summary>馃 Understanding Autism: A Different Way of Thinking <span class="udl-badge">UDL</span></summary>
+            <div class="details-content">
+                <p><strong>Simple Definition:</strong> A neurodevelopmental condition that affects how a person communicates, interacts, and experiences the world. It is a <em>spectrum</em>, meaning every autistic pupil is unique.</p>
+
+                <h4>What You Might Observe in Class:</h4>
+                <ul>
+                    <li><strong>Social Interaction:</strong> Difficulty understanding unspoken social rules; may prefer parallel play or working alone</li>
+                    <li><strong>Communication:</strong> May use language literally (confused by idioms like "break a leg"); may have intense knowledge on specific topics</li>
+                    <li><strong>Sensory Sensitivities:</strong> May be overwhelmed by loud noises, bright lights, or certain textures; may seek sensory input</li>
+                    <li><strong>Routines & Predictability:</strong> Strong preference for familiar routines; distress with unexpected changes</li>
+                </ul>
+
+                <h4>Strength-Based Perspective:</h4>
+                <p>Autistic thinkers bring incredible strengths to the classroom:</p>
+                <div class="strength-grid">
+                    <div class="strength-card">
+                        <strong>Intense Focus</strong>
+                        <div>Deep concentration on interests</div>
+                    </div>
+                    <div class="strength-card">
+                        <strong>Attention to Detail</strong>
+                        <div>Noticing patterns others miss</div>
+                    </div>
+                    <div class="strength-card">
+                        <strong>Honesty & Fairness</strong>
+                        <div>Strong sense of justice</div>
+                    </div>
+                    <div class="strength-card">
+                        <strong>Creative Thinking</strong>
+                        <div>Original problem-solving</div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>In a Kazakhstani Classroom:</strong> Like teachers worldwide, you may have limited specialist support. The strategies in this toolkit are chosen for their practicality and low cost.
+                </div>
+
+                <a href="index.html#resources" class="download-button">馃摜 Download: "Autism Strengths" Info Card</a>
+                <a href="index.html#resources" class="download-button">馃摜 Download: Sensory Preferences Chart</a>
+            </div>
+        </details>
+
+        <!-- Section 1.3 -->
+        <details>
+            <summary>馃攧 Putting It All Together <span class="udl-badge">UDL</span></summary>
+            <div class="details-content">
+                <p><strong>Important Note on Overlap:</strong> A pupil can be both autistic and dyslexic. The key is to focus on the individual's specific needs and strengths.</p>
+
+                <h4>Your New Mindset:</h4>
+                <ul>
+                    <li>See the <strong>student first</strong>, not the label</li>
+                    <li>Look for <strong>strengths to build on</strong>, not just challenges to fix</li>
+                    <li>Understand that <strong>behavior is communication</strong></li>
+                    <li>Focus on <strong>adapting your teaching</strong>, not changing the student</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>馃挕 Reflection Question:</strong> Think of one student in your class. What unique strength do they bring that you could leverage in your lessons next week?
+                </div>
+
+                <a href="index.html#resources" class="download-button">馃摜 Download: Strength-Based Reflection Worksheet</a>
+            </div>
+        </details>
+
+        <!-- Next Steps & Progress Navigation -->
+        <div class="progress-nav">
+            <a href="index.html" class="nav-button secondary">鈫?Back to Home</a>
+            <a href="module2.html" class="nav-button">Continue to Module 2 鈫?/a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Inclusive Classroom Hub - Kazakhstan. A project for building inclusive schools.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #bdc3c7;">Built on evidence-based practices and UDL framework</p>
+    </footer>
+</body>
+</html>
+
