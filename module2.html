@@ -1,0 +1,399 @@
+Exit code: 0
+Wall time: 0.8 seconds
+Output:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Classroom Environment 鈥?Inclusive Classroom Hub</title>
+    <style>
+        /* Inherit global styles from homepage and module1 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header - Same as module1 */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #4a6572);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-icon { font-size: 1.8rem; }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .nav-links a:hover { opacity: 0.8; }
+
+        /* Module-specific styles - Consistent with module1 */
+        .module-hero {
+            background: linear-gradient(135deg, #e67e22, #f39c12); /* Module 2 color */
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .module-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .video-placeholder {
+            background: #ecf0f1;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 2rem 0;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .key-takeaways {
+            background: #fef9e7;
+            border-left: 4px solid #e67e22;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        details {
+            margin: 1.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        summary {
+            padding: 1.2rem;
+            background: #f8f9fa;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        summary:hover { background: #e9ecef; }
+        .details-content {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        .download-button {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover { background: #d35400; }
+        .tip-box {
+            background: #e8f6f3;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            border-left: 4px solid #1abc9c;
+        }
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .strategy-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-top: 3px solid #e67e22;
+        }
+        .udl-badge {
+            display: inline-block;
+            background: #9b59b6;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        /* Progress Navigation */
+        .progress-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        .nav-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover { background: #2980b9; }
+        .nav-button.secondary {
+            background: #95a5a6;
+        }
+        .nav-button.secondary:hover {
+            background: #7f8c8d;
+        }
+
+        /* Classroom Setup Visual */
+        .classroom-visual {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 2px dashed #bdc3c7;
+            text-align: center;
+        }
+        .zone-indicator {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .zone-reading { background: #aed6f1; color: #2c3e50; }
+        .zone-group { background: #a3e4d7; color: #2c3e50; }
+        .zone-quiet { background: #f9e79f; color: #2c3e50; }
+        .zone-teacher { background: #f5b7b1; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">馃彨</span>
+                Inclusive Classroom Hub
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#modules">Modules</a>
+                <a href="index.html#resources">Resource Library</a>
+                <a href="index.html#home">Community</a>
+                <a href="index.html#home">For Leaders</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Module Hero Section -->
+    <section class="module-hero">
+        <h1>Module 2: Classroom Environment & Daily Management</h1>
+        <p>Create a calm, predictable, and accessible classroom that reduces anxiety and helps all students focus on learning.</p>
+    </section>
+
+    <!-- Main Module Content -->
+    <div class="module-container">
+        <!-- Video Introduction -->
+        <div class="video-placeholder">
+            [Embedded Video Player: "The Power of a Structured Classroom" - 2 min]
+        </div>
+
+        <!-- Key Takeaways -->
+        <div class="key-takeaways">
+            <h3>Key Takeaways:</h3>
+            <ul>
+                <li><strong>Predictability reduces anxiety.</strong> Visual schedules and clear routines help students know what to expect.</li>
+                <li><strong>Structure promotes independence.</strong> Well-defined areas and organized materials help students navigate their day.</li>
+                <li><strong>A sensory-friendly classroom benefits everyone.</strong> Reducing clutter and noise helps all students concentrate better.</li>
+                <li><strong>These strategies are low-cost and high-impact.</strong> You can implement most of them with paper, markers, and thoughtful planning.</li>
+            </ul>
+        </div>
+
+        <!-- UDL Connection -->
+        <div class="tip-box">
+            <strong>馃挕 UDL Connection:</strong> A well-designed environment provides multiple means of engagement by reducing threats and distractions. It creates a safe space where all learners can thrive.
+        </div>
+
+        <!-- Section 2.1 -->
+        <details open>
+            <summary>馃攧 Visual Schedules: A Roadmap for the Day <span class="udl-badge">UDL</span></summary>
+            <div class="details-content">
+                <p><strong>Why it works:</strong> Makes the abstract sequence of time concrete and predictable. This is crucial for autistic students and helps all students with executive functioning.</p>
+
+                <h4>How to Do It (Step-by-Step):</h4>
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <strong>1. Choose Format</strong>
+                        <div>Wall schedule for class or individual desk strips</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>2. Use Visuals</strong>
+                        <div>Simple pictures for each activity</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>3. Keep it Simple</strong>
+                        <div>Start with 3-5 key activities</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>4. Make Interactive</strong>
+                        <div>Move tokens or flip cards as completed</div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>In a Kazakhstani Classroom:</strong> Use this to visually reinforce transitions between language lessons (Kazakh/Russian). A simple drawn schedule on the board is a great start.
+                </div>
+
+                <a href="index.html#resources" class="download-button">馃摜 Download: Visual Schedule Template</a>
+                <a href="index.html#resources" class="download-button">馃摜 Download: Activity Icons Library</a>
+            </div>
+        </details>
+
+        <!-- Section 2.2 -->
+        <details>
+            <summary>馃摝 Learning Zones & Sensory Support <span class="udl-badge">UDL</span></summary>
+            <div class="details-content">
+                <p><strong>Why it works:</strong> Defined areas create a sense of order. A quiet space provides a safe retreat for students feeling overwhelmed, preventing meltdowns.</p>
+
+                <h4>Classroom Zones Setup:</h4>
+                <div class="classroom-visual">
+                    <p><strong>Sample Classroom Layout:</strong></p>
+                    <div>
+                        <span class="zone-indicator zone-reading">馃摎 Reading Corner</span>
+                        <span class="zone-indicator zone-group">馃懃 Group Work Area</span>
+                        <span class="zone-indicator zone-quiet">馃か Quiet Zone</span>
+                        <span class="zone-indicator zone-teacher">馃懇鈥嶐煆?Teacher Area</span>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d;">Use furniture or rugs to define these spaces clearly</p>
+                </div>
+
+                <h4>Creating a "Quiet Corner":</h4>
+                <ul>
+                    <li><strong>Location:</strong> Quiet part of room, partially shielded</li>
+                    <li><strong>Furnishings:</strong> Comfortable seat (cushion, beanbag)</li>
+                    <li><strong>Calming Tools:</strong> Stress balls, noise-canceling headphones, fidget toys, calming glitter jars</li>
+                </ul>
+
+                <h4>Environmental Adjustments:</h4>
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <strong>Reduce Clutter</strong>
+                        <div>Tidy walls, organized displays</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>Manage Noise</strong>
+                        <div>Visual noise meter, carpet areas</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>Lighting</strong>
+                        <div>Natural light, reduce fluorescent glare</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>Flexible Seating</strong>
+                        <div>Options for different preferences</div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>In a Kazakhstani Classroom:</strong> This is highly achievable even in crowded classrooms. A simple desk divider and a box of calming tools can create an effective personal "quiet zone."
+                </div>
+
+                <a href="index.html#resources" class="download-button">馃摜 Download: "Setting Up Your Quiet Corner" Guide</a>
+                <a href="index.html#resources" class="download-button">馃摜 Download: Printable Visual Noise Meter</a>
+            </div>
+        </details>
+
+        <!-- Section 2.3 -->
+        <details>
+            <summary>鈴?Routines and Transitions <span class="udl-badge">UDL</span></summary>
+            <div class="details-content">
+                <p><strong>Why it works:</strong> Clear routines save instructional time and reduce student anxiety about what comes next. Smooth transitions are key to maintaining a calm classroom flow.</p>
+
+                <h4>Essential Routines to Teach:</h4>
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <strong>Morning Entry</strong>
+                        <div>Where to put bags, first activity</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>Handing in Work</strong>
+                        <div>Clear procedure and location</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>Lining Up</strong>
+                        <div>Consistent expectations</div>
+                    </div>
+                    <div class="strategy-card">
+                        <strong>Emergency Drills</strong>
+                        <div>Practice with visual supports</div>
+                    </div>
+                </div>
+
+                <h4>Transition Strategies:</h4>
+                <ul>
+                    <li><strong>Teach Routines Explicitly:</strong> Don't assume students know them. Model and practice repeatedly.</li>
+                    <li><strong>Use Transition Warnings:</strong> Give 5-minute and 1-minute warnings. Use visual timers.</li>
+                    <li><strong>Implement Transition Cues:</strong> Consistent song, chime, or hand signal.</li>
+                    <li><strong>Visual Instructions:</strong> Numbered visual lists for multi-step tasks (packing bags, washing hands).</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>In a Kazakhstani Classroom:</strong> These strategies are especially helpful in multi-grade or large classes where management is crucial. A consistent transition song can work wonders.
+                </div>
+
+                <a href="index.html#resources" class="download-button">馃摜 Download: Transition Warning Cards</a>
+                <a href="index.html#resources" class="download-button">馃摜 Download: Multi-Step Task Breakdown Template</a>
+                <a href="index.html#resources" class="download-button">馃摜 Download: Routines Teaching Checklist</a>
+            </div>
+        </details>
+
+        <!-- Progress Navigation -->
+        <div class="progress-nav">
+            <a href="module1.html" class="nav-button secondary">鈫?Back to Module 1</a>
+            <a href="index.html#modules" class="nav-button">Continue to Module 3 鈫?/a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Inclusive Classroom Hub - Kazakhstan. A project for building inclusive schools.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #bdc3c7;">Built on evidence-based practices and UDL framework</p>
+    </footer>
+</body>
+</html>
+
